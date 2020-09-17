@@ -113,7 +113,7 @@ b.y1.ed_pred_b.gi_b.mcrpbi=lmer(y1.ed_sum ~ b.ed_sum + b.gi_sum.centered + b.bmi
 
 summary(b.y1.ed_pred_b.gi_b.mcrpbi)
 r.squaredGLMM(b.y1.ed_pred_b.gi_b.mcrpbi)
-standardize(g.y1.ed_pred_b.gi_b.mcrpbi)
+standardize(b.y1.ed_pred_b.gi_b.mcrpbi)
 
 
 sink()
