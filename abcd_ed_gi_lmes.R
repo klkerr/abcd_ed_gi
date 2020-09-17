@@ -8,6 +8,7 @@ library(lme4)
 library(dplyr)
 library(MuMIn)
 library(r2glmm)
+library(effectsize)
 
 print("Loading Rds files...")
 abcd.ed.gi=readRDS("abcd_ed_gi.Rds")
@@ -62,6 +63,7 @@ y1.ed_pred_b.gi_b.fcrpbi=lmer(y1.ed_sum ~ b.ed_sum + b.gi_sum.centered + b.bmi +
 
 summary(y1.ed_pred_b.gi_b.fcrpbi)
 r.squaredGLMM(y1.ed_pred_b.gi_b.fcrpbi)
+standardize(y1.ed_pred_b.gi_b.fcrpbi)
 
 #Maternal acceptance
 data=abcd.ed.gi.m_crpbi[c(const.vars,"b.ed_sum","b.gi_sum.centered","y1.ed_sum","y1.interview_age","b.crpbi_mother.centered","b.gi_sum","b.crpbi_mother","b.cbcl_scr_dsm5_anxdisord_t")]
@@ -77,6 +79,7 @@ writeLines("###########################################")
 writeLines("Results for GI symptoms and maternal acceptance:")	
 summary(y1.ed_pred_b.gi_b.mcrpbi)
 r.squaredGLMM(y1.ed_pred_b.gi_b.mcrpbi)
+standardize(y1.ed_pred_b.gi_b.mcrpbi)
 
 writeLines("##################################################")
 writeLines("Maternal acceptance LME results by participant sex")
@@ -96,6 +99,7 @@ g.y1.ed_pred_b.gi_b.mcrpbi=lmer(y1.ed_sum ~ b.ed_sum + b.gi_sum.centered + b.bmi
 
 summary(g.y1.ed_pred_b.gi_b.mcrpbi)
 r.squaredGLMM(g.y1.ed_pred_b.gi_b.mcrpbi)
+standardize(g.y1.ed_pred_b.gi_b.mcrpbi)
 
 writeLines("##################")
 writeLines("Females (Table S4)")
@@ -109,6 +113,7 @@ b.y1.ed_pred_b.gi_b.mcrpbi=lmer(y1.ed_sum ~ b.ed_sum + b.gi_sum.centered + b.bmi
 
 summary(b.y1.ed_pred_b.gi_b.mcrpbi)
 r.squaredGLMM(b.y1.ed_pred_b.gi_b.mcrpbi)
+standardize(g.y1.ed_pred_b.gi_b.mcrpbi)
 
 
 sink()
