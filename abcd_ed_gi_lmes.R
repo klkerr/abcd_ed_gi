@@ -102,7 +102,7 @@ r.squaredGLMM(g.y1.ed_pred_b.gi_b.mcrpbi)
 standardize(g.y1.ed_pred_b.gi_b.mcrpbi)
 
 writeLines("##################")
-writeLines("Females (Table S4)")
+writeLines("Males (Table S4)")
 writeLines("##################")
 
 data=boys.abcd.ed.gi.m_crpbi[c(const.vars,"b.ed_sum","b.gi_sum.centered","y1.ed_sum","y1.interview_age","b.crpbi_mother.centered","b.gi_sum","b.crpbi_mother","b.cbcl_scr_dsm5_anxdisord_t")]
