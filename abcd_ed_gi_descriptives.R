@@ -117,3 +117,103 @@ cohen.d(abcd.ed.gi.f_crpbi$y1.crpbi_father,abcd.ed.gi.f_crpbi$b.crpbi_father,na.
 writeLines("\nBaseline vs Y1 - ED Symptoms")
 t.test(abcd.ed.gi$y1.ed_sum,abcd.ed.gi$b.ed_sum,paired=TRUE)
 cohen.d(abcd.ed.gi$y1.ed_sum,abcd.ed.gi$b.ed_sum,na.rm=TRUE)
+
+
+writeLines("\n################################")
+writeLines("Gendered Descriptives (Table S1)")
+writeLines("################################")
+
+girls.abcd.ed.gi=abcd.ed.gi[abcd.ed.gi$gender=="F",]
+boys.abcd.ed.gi=abcd.ed.gi[abcd.ed.gi$gender=="M",]
+
+girls.abcd.ed.gi.m_crpbi=abcd.ed.gi.m_crpbi[abcd.ed.gi.m_crpbi$gender=="F",]
+boys.abcd.ed.gi.m_crpbi=abcd.ed.gi.m_crpbi[abcd.ed.gi.m_crpbi$gender=="M",]
+
+girls.abcd.ed.gi.f_crpbi=abcd.ed.gi.f_crpbi[abcd.ed.gi.f_crpbi$gender=="F",]
+boys.abcd.ed.gi.f_crpbi=abcd.ed.gi.f_crpbi[abcd.ed.gi.f_crpbi$gender=="M",]
+
+print("Baseline Age - Girls")
+describe(girls.abcd.ed.gi$b.interview_age)
+
+print("Year 1 Age - Girls")
+describe(girls.abcd.ed.gi$y1.interview_age)
+
+print("Baseline BMI - Girls")
+describe(girls.abcd.ed.gi$b.bmi)
+
+print("Year 1 BMI - Girls")
+describe(girls.abcd.ed.gi$y1.bmi)
+
+print("Baseline GI Symptoms - Girls")
+describe(girls.abcd.ed.gi$b.gi_sum)
+
+print("Year 1 GI Symptoms - Girls")
+describe(girls.abcd.ed.gi$y1.gi_sum)
+
+print("Baseline Anxiety - Girls")
+describe(girls.abcd.ed.gi$b.cbcl_scr_dsm5_anxdisord_t)
+
+print("Year 1 Anxiety - Girls")
+describe(girls.abcd.ed.gi$y1.cbcl_scr_dsm5_anxdisord_t)
+
+print("Baseline ED Symptoms - Girls")
+describe(girls.abcd.ed.gi$b.ed_sum)
+
+print("Year 1 ED Symptoms - Girls")
+describe(girls.abcd.ed.gi$y1.ed_sum)
+
+print("Baseline Maternal Acceptance - Girls")
+describe(girls.abcd.ed.gi.m_crpbi$b.crpbi_mother)
+
+print("Year 1 Maternal Acceptance - Girls")
+describe(girls.abcd.ed.gi.m_crpbi$y1.crpbi_mother)
+
+print("Baseline Paternal Acceptance - Girls")
+describe(girls.abcd.ed.gi.f_crpbi$b.crpbi_father)
+
+print("Year 1 Paternal Acceptance - Girls")
+describe(girls.abcd.ed.gi.f_crpbi$y1.crpbi_father)
+
+print("Baseline Age - Boys")
+describe(boys.abcd.ed.gi$b.interview_age)
+
+print("Year 1 Age - Boys")
+describe(boys.abcd.ed.gi$y1.interview_age)
+
+print("Baseline BMI - Boys")
+describe(boys.abcd.ed.gi$b.bmi)
+
+print("Year 1 BMI - Boys")
+describe(boys.abcd.ed.gi$y1.bmi)
+
+print("Baseline GI Symptoms - Boys")
+describe(boys.abcd.ed.gi$b.gi_sum)
+
+print("Year 1 GI Symptoms - Boys")
+describe(boys.abcd.ed.gi$y1.gi_sum)
+
+print("Baseline ED Symptoms - Boys")
+describe(boys.abcd.ed.gi$b.ed_sum)
+
+print("Year 1 ED Symptoms - Boys")
+describe(boys.abcd.ed.gi$y1.ed_sum)
+
+print("Baseline Anxiety - Boys")
+describe(boys.abcd.ed.gi$b.cbcl_scr_dsm5_anxdisord_t)
+
+print("Year 1 Anxiety - Boys")
+describe(boys.abcd.ed.gi$y1.cbcl_scr_dsm5_anxdisord_t)
+
+print("Baseline Maternal Acceptance - Boys")
+describe(boys.abcd.ed.gi.m_crpbi$b.crpbi_mother)
+
+print("Year 1 Maternal Acceptance - Boys")
+describe(boys.abcd.ed.gi.m_crpbi$y1.crpbi_mother)
+
+print("Baseline Paternal Acceptance - Boys")
+describe(boys.abcd.ed.gi.f_crpbi$b.crpbi_father)
+
+print("Year 1 Paternal Acceptance - Boys")
+describe(boys.abcd.ed.gi.f_crpbi$y1.crpbi_father)
+
+sink()
