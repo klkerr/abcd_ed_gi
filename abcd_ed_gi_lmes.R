@@ -1,7 +1,5 @@
 #!/usr/bin/Rscript
 
-.libPaths(c("/media/cephfs/homefolders/librad.laureateinstitute.org/kkerr/rlib",.libPaths()))
-
 library(psych)
 library(lmerTest)
 library(lme4)
