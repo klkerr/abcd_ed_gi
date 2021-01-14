@@ -41,7 +41,7 @@ writeLines("Whole sample correlation matrix (Table 3)")
 writeLines("#########################################")
 
 #Make correlation matrices
-cont.vars=c("b.bmi","y1.interview_age","b.gi_sum")
+cont.vars=c("b.bmi","b.interview_age","b.gi_sum")
 
 data=abcd.ed.gi[c(cont.vars,"b.cbcl_scr_dsm5_anxdisord_t")]
 corr.test(data, adjust = "none", use = "pairwise")
